@@ -1,0 +1,183 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input {
+	font-size: 16px;
+}
+
+.home {
+	width: 100%;
+	height: 100vh;
+	background: #E5E5E5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header {
+	width: 100%;
+	height: 70vh;
+	position: relative;
+	background: #E5E5E5;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 10.11%;
+	}
+
+	.curved {
+		position: absolute;
+		width: 100%;
+		top: -30%;
+	}
+
+	.picture {
+		display: block;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.logo-white {
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		z-index: 1;
+	}
+}
+
+.brand-name {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 16px;
+	letter-spacing: 0.1px;
+	color: #192E35;
+}
+
+.login {
+	position: absolute;
+    top: 5%;
+    right: 5%;
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.verify {
+	position: absolute;
+    top: 5%;
+    right: 15%;
+	color: #fff;
+	font-size: 20px;
+}
+
+.group-input {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 50px;
+	display: flex;
+
+	.group-input__fill-info-area {
+		width: calc(100% - 150px);
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.group-input__user-info {
+		width: 70%;
+		height: 100%;
+		display: flex;
+
+		.item {
+			height: 100%;
+			background: #FFFFFF;
+			border: 2px solid #E8E8E8;
+			border-radius: 10px;
+			padding: 2px 5px 2px 15px;
+		}
+
+		.user-info__last-name {
+			flex-grow: 2;
+			margin-right: 10px;
+		}
+
+		.user-info__first-name {
+			flex-grow: 1;
+			margin-right: 10px;
+		}
+
+		.user-info__birthday {
+			flex-grow: 2;
+		}
+	}
+
+	span {
+		display: flex;
+		height: 100%;
+		align-items: center;
+		margin: 0 10px;
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 16px;
+	}
+
+	.group-input__diploma-number {
+		width: 29%;
+		margin-right: 10px;
+
+		input {
+			width: 100%;
+		}
+	}
+
+	.group-input__btn-search {
+		width: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #EF0F3F;
+		border: none;
+		border-radius: 10px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 28px;
+		letter-spacing: 0.2px;
+		color: #FFFFFF;
+
+		img {
+			width: 1.5rem;
+			margin-right: 5px;
+		}
+	}
+}
+
+.group-input__diploma-number {
+	input {
+		height: 100%;
+		background: #FFFFFF;
+		border: 2px solid #E8E8E8;
+		border-radius: 10px;
+		padding: 2px 5px 2px 15px;
+	}
+}
