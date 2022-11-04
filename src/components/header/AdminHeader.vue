@@ -89,6 +89,7 @@ header {
         list-style-type: none;
         margin-right: 1rem;
         font-weight: 600;
+        cursor: pointer;
       }
     }
   }

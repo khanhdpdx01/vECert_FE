@@ -41,6 +41,7 @@ export default {
   methods: {
     ...mapActions("user", ["login"]),
     async startLogin() {
+      console.log(this.info);
       await this.login(this.info);
       if (this.hasLogin) {
         switch (this.getRole) {

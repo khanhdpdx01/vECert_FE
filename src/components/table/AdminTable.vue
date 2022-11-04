@@ -31,10 +31,10 @@
           <th>Trình độ</th>
           <th>Hình thức ĐT</th>
           <th>Chuyên ngành</th>
-          <th>Năm TN</th>
-          <th>Số bằng</th>
-          <th>Trạng thái VB</th>
-          <th>Giao dịch</th>
+          <th class="center">Năm TN</th>
+          <th class="center">Số bằng</th>
+          <th class="center">Trạng thái VB</th>
+          <th class="center">Giao dịch</th>
         </thead>
         <tbody>
           <tr
@@ -50,10 +50,13 @@
             <td>{{diploma.level}}</td>
             <td>{{diploma.modeOfStudy}}</td>
             <td>{{diploma.speciality}}</td>
-            <td>{{diploma.yearOfGraduation}}</td>
-            <td>{{diploma.serialNumber}}</td>
-            <td>{{diploma.status}}</td>
-            <td>
+            <td class="center">{{diploma.yearOfGraduation}}</td>
+            <td class="center">{{diploma.serialNumber}}</td>
+            <td class="center">
+              <span v-if="diploma.status === 'Đã nhận'" class="status-diploma status-diploma-success">{{diploma.status}}</span>
+              <span v-if="diploma.status === 'Đang xử lý'" class="status-diploma status-diploma-pending">{{diploma.status}}</span>
+            </td>
+            <td class="center">
               <img
                 v-if="diploma.status === 'Chưa nhận'"
                 src="../../assets/svg/stop-icon.svg"
@@ -307,6 +310,24 @@ input {
         background-color: #ddd;
         cursor: pointer;
       }
+    }
+    .status-diploma {
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-family: 'Roboto';
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .status-diploma-success {
+      background: #CDFFCD;
+      color: #007F00;
+    }
+    .status-diploma-pending {
+      background: #f6e4c8;
+      color: #FF9900;
+    }
+    .center {
+      text-align: center;
     }
   }
 }

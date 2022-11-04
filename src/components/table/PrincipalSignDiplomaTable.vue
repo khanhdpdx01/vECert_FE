@@ -33,7 +33,10 @@
             <td>{{diploma.speciality}}</td>
             <td>{{diploma.yearOfGraduation}}</td>
             <td>{{diploma.serialNumber}}</td>
-            <td>{{diploma.status}}</td>
+            <td>
+              <span v-if="diploma.status === 'Đã nhận'" class="status-diploma status-diploma-success">{{diploma.status}}</span>
+              <span v-if="diploma.status === 'Đang xử lý'" class="status-diploma status-diploma-pending">{{diploma.status}}</span>
+            </td>
             <td>
               <img v-if="diploma.status === 'Chưa nhận'" src="../../assets/svg/stop-icon.svg" alt class="filter" />
               <img v-if="diploma.status === 'Đã nhận'" src="../../assets/svg/check-icon.svg" alt class="filter" />
@@ -187,6 +190,21 @@ input {
       font-weight: 600;
       z-index: 100;
       cursor: pointer;
+    }
+    .status-diploma {
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-family: 'Roboto';
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .status-diploma-success {
+      background: #CDFFCD;
+      color: #007F00;
+    }
+    .status-diploma-pending {
+      background: #f6e4c8;
+      color: #FF9900;
     }
   }
 }
