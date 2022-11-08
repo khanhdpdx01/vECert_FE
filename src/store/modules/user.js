@@ -5,6 +5,7 @@ const state = {
     isLogin: false,
     users: [],
     role: null,
+    username: null,
     page: {
         totalPages: 0,
         totalItems: 0,
@@ -24,6 +25,9 @@ const mutations = {
     },
     SET_ROLE(state, roleName) {
         state.role = roleName;
+    },
+    SET_USERNAME(state, username) {
+        state.username = username;
     }
 }
 
@@ -34,6 +38,7 @@ const actions = {
             if(res.status === 200 && res.data) {
                 commit('SET_IS_LOGIN', true);
                 commit('SET_ROLE', res.data.role);
+                commit('SET_USERNAME', res.data.username);
             }
         } catch (err) {
             commit('SET_IS_LOGIN', false);
@@ -57,6 +62,7 @@ const getters = {
     getUsers: (state) => state.users,
     getPage: (state) => state.page,
     getRole: (state) => state.role,
+    getUsername: (state) => state.username,
 }
 
 export default {

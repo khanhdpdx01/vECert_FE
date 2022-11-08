@@ -104,7 +104,7 @@ export default {
             this.$router.replace({ path: "/principal" });
         }
       } else {
-        this.$toast.error('Người dùng không tồn tại hoặc đã bị chặn!')
+        this.$toast.error('Người dùng không tồn tại hoặc đã bị chặn!');
       }
     }
   }

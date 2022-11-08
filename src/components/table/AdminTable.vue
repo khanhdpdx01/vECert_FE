@@ -218,7 +218,7 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-GPA span,
+span,
 input {
   font-family: "Roboto";
   font-style: normal;
@@ -267,7 +267,7 @@ input {
         border-radius: 5px;
         height: 50px;
         border: none;
-        color: #8f9294;
+        color: #000;
         opacity: 0.5;
         padding-left: 1rem;
         margin-right: 1rem;

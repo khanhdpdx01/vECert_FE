@@ -11,7 +11,7 @@
           </button>
         </div>
         <div class="group-button__search-area">
-          <input type="text" class="search-input" placeholder="Tìm kiếm tên hoặc số bằng" v-model="searchContent" @blur="search"/>
+          <input type="text" class="search-input" placeholder="Tìm kiếm họ tên hoặc số điện thoại" v-model="searchContent" @blur="search"/>
           <img src="../../assets/svg/filter-icon.svg" alt class="filter" />
         </div>
       </div>
@@ -134,9 +134,9 @@ export default {
 
       if(res.status === 200) {
         if(existUser.active) {
-          this.$toast.success('Người dùng được mở chặn')
+          this.$toast.success('Người dùng được mở chặn');
         } else {
-          this.$toast.success('Người dùng đã bị chặn')
+          this.$toast.success('Người dùng đã bị chặn');
         }
       } 
     }
@@ -197,7 +197,7 @@ input {
         border-radius: 5px;
         height: 50px;
         border: none;
-        color: #8f9294;
+        color: #000;
         opacity: 0.5;
         padding-left: 1rem;
         margin-right: 1rem;

@@ -16,19 +16,17 @@
       </ul>
     </div>
     <div class="header__user-info">
-      <div class="header__notification">
-        <img src="../../assets/svg/notification-icon.svg" alt="notification icon" />
-      </div>
       <div class="header__user-menu">
-        <img src="../../assets/svg/user-sample.svg" alt="notification icon" class="user-img" />
         <div class="header__user--dropdown">
-          <span class="header__username">Nguyễn Văn A</span>
+          <img src="../../assets/img/profile-user.png" alt="notification icon" class="user-img" />
+          <span class="header__username">{{getUsername}}</span>
           <ul class="dropdown">
-            <li @click="logout">Logout</li>
+            <li @click="logout">
+              <img src="../../assets/svg/log_out_icon.svg" alt="notification icon" class="logout-img" />
+              <span>Logout</span>
+            </li>
           </ul>
         </div>
-
-        <img src="../../assets/svg/down-icon.svg" alt="notification icon" class="down-icon" />
       </div>
     </div>
   </header>
@@ -39,7 +37,7 @@ import { mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters("user", ["hasLogin", "getRole"])
+    ...mapGetters("user", ["hasLogin", "getRole", "getUsername"])
   },
   methods: {
     logout() {
@@ -114,24 +112,37 @@ header {
       @include flexCenter;
       .user-img {
         border-radius: 50%;
-        margin-right: 1rem;
+        margin-right: .5rem;
+        width: 25px;
+        height: 25px;
       }
       .header__user--dropdown {
         position: relative;
         cursor: pointer;
+        display: flex;
+        align-items: center;
         .header__username {
           font-weight: 600;
+          text-align: center;
+          text-transform: none;
         }
         .dropdown {
           position: absolute;
-          top: 16px;
+          top: 25px;
           right: 0;
-          width: 100px;
+          width: 150px;
           padding: 10px;
           text-align: center;
           background-color: rgba($color: #000, $alpha: 0.1);
           list-style-type: none;
           display: none;
+          li {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-transform:none;
+            text-align: start;
+          }
         }
         &:hover > .dropdown {
           display: block;

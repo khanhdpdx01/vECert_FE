@@ -294,6 +294,7 @@ export default {
       if (res.status === 200) {
         this.$emit('success');
       }
+      this.$toast.success('Thêm mới văn bằng thành công')
     },
     addFile(e) {
       let droppedFiles = e.dataTransfer.files;
@@ -351,6 +352,7 @@ li {
     border: 1px solid #e6e6e6;
     border-radius: 5px;
     padding: 10px;
+    font-size: 16px;
   }
 }
 

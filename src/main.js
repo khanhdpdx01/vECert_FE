@@ -9,7 +9,7 @@ import setUpInterceptor from './services/setUpInterceptor';
 
 Vue.config.productionTip = false
 Vue.use(VueToast, {
-  duration: 1000,
+  duration: 1500,
   position: 'top-right',
 });
 Vue.use(VueCookies);

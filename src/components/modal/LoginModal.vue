@@ -155,7 +155,7 @@ export default {
       width: 100%;
       height: 50px;
       border: 1px solid;
-      background: #2691d9;
+      background: #EF0F3F;
       border-radius: 25px;
       font-size: 18px;
       color: #e9f4fb;
@@ -164,7 +164,7 @@ export default {
       outline: none;
     }
     input[type="submit"]:hover {
-      border-color: #2691d9;
+      border-color: #f90237;
       transition: 0.5s;
     }
     .signup_link {
