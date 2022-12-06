@@ -1,4 +1,4 @@
-<template>
+BASE_URL<template>
   <div class="modal">
     <form class="modal__content" @submit.prevent="submitForm">
       <div class="content__back" @click="$emit('hide-modal')">
@@ -40,7 +40,7 @@
               Giới tính
               <div class="group-radio-button">
                 <label for="male">
-                  <input type="radio" name="gender" id="male" v-model="diploma.gender" />
+                  <input type="radio" name="gender" id="male" :value="true" v-model="diploma.gender"/>
                   <div class="radio-custom">
                     <span></span>
                     <span>Nam</span>
@@ -48,7 +48,7 @@
                 </label>
 
                 <label for="female">
-                  <input type="radio" name="gender" id="female" v-model="diploma.gender" />
+                  <input type="radio" name="gender" id="female" :value="false" v-model="diploma.gender"/>
                   <div class="radio-custom">
                     <span></span>
                     <span>Nữ</span>

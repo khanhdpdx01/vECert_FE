@@ -26,6 +26,8 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 
+const subPath = process.env.VUE_APP_SUB_PATH;
+
 export default {
   data() {
     return {
@@ -46,13 +48,13 @@ export default {
       if (this.hasLogin) {
         switch (this.getRole) {
           case "ROLE_ADMIN":
-            this.$router.replace({ path: "/admin/diplomas" });
+            this.$router.replace({ path: `${subPath}/admin/diplomas` });
             break;
           case "ROLE_SUPERADMIN":
-            this.$router.replace({ path: "/admin/diplomas" });
+            this.$router.replace({ path: `${subPath}/admin/diplomas` });
             break;
           case "ROLE_PRINCIPAL":
-            this.$router.replace({ path: "/principal" });
+            this.$router.replace({ path:  `${subPath}/principal` });
         }
       } else {
         this.$toast.error('Người dùng không tồn tại hoặc đã bị chặn!')

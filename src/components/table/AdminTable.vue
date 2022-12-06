@@ -45,7 +45,7 @@
             <td>{{diploma.lastName}}</td>
             <td>{{diploma.firstName}}</td>
             <td>{{diploma.dateOfBirth}}</td>
-            <td>{{diploma.gender ? 'Nam' : 'Nữ'}}</td>
+            <td>{{diploma.gender}}</td>
             <td>{{diploma.placeOfBirth}}</td>
             <td>{{diploma.level}}</td>
             <td>{{diploma.modeOfStudy}}</td>

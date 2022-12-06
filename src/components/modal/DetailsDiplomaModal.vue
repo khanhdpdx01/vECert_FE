@@ -38,7 +38,7 @@
           </div>
           <div class="item">
             <span class="title">Giới tính:</span>
-            <span class="content">{{diploma.dateOfBirth ? 'Nam' : 'Nữ'}}</span>
+            <span class="content">{{diploma.gender}}</span>
           </div>
           <div class="item">
             <span class="title">Lớp sinh viên:</span>
