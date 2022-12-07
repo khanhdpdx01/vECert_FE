@@ -5,21 +5,19 @@ import Admin from '../views/Admin.vue'
 
 Vue.use(VueRouter)
 
-const subPath = process.env.VUE_APP_SUB_PATH;
-
 const routes = [
   {
-    path: `${subPath}`,
+    path: '/',
     name: 'Home',
     component: Home
   },
   {
-    path: `${subPath}/verify`,
+    path: '/verify',
     name: 'VerifyDiplomaPage',
     component: () => import('../views/VerifyDiplomaPage.vue')
   },
   {
-    path: `${subPath}/admin`,
+    path: '/admin',
     name: 'Admin',
     component: Admin,
     children: [
@@ -36,7 +34,7 @@ const routes = [
     ]
   },
   {
-    admin: `${subPath}/principal`,
+    path: '/principal',
     name: 'Principal',
     component: () => import ('../views/Principal.vue'),
   }

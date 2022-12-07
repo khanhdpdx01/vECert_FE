@@ -1,7 +1,5 @@
 import http from './index';
 
-const subPath = process.env.VUE_APP_SUB_PATH;
-
 const setup = (router, cookies, localStorage) => {
     http.interceptors.response.use(
         (res) => {
@@ -9,7 +7,7 @@ const setup = (router, cookies, localStorage) => {
         }, 
         async (err) => {
             if(err.response?.status === 401) {
-                router.push({ path: `${subPath}` }).catch(()=>{});
+                router.push({ path: '/' }).catch(()=>{});
                 cookies.remove("access_token");
                 localStorage.removeItem("vuex");
                 // router.go();

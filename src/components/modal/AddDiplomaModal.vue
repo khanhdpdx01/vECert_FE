@@ -320,6 +320,7 @@ export default {
 
 <style lang="scss" scoped>
 @mixin flexCenter {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;

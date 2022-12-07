@@ -35,8 +35,6 @@
 <script>
 import { mapGetters } from "vuex";
 
-const subPath = process.env.VUE_APP_SUB_PATH;
-
 export default {
   computed: {
     ...mapGetters("user", ["hasLogin", "getRole", "getUsername"])
@@ -46,10 +44,10 @@ export default {
       this.$cookies.remove("access_token");
       localStorage.removeItem("vuex");
       this.$store.state.user.isLogin = false;
-      this.$router.replace({ path: `${subPath}` });
+      this.$router.replace({ path: '/' });
     },
     redirectHomepage() {
-      this.$router.replace({ path: `${subPath}` });
+      this.$router.replace({ path: '/' });
     }
   }
 };

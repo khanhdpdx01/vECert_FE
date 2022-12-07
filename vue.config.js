@@ -6,5 +6,6 @@ module.exports = defineConfig({
   lintOnSave: false,
   devServer: {
     port: 8080
-  }
+  },
+  publicPath: "/usecase/certificatemngt/"
 })
