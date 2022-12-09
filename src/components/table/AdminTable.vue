@@ -146,7 +146,7 @@ export default {
     await this.getAllDiplomasWithPagination({
       params: {
         page: 1,
-        size: process.env.VUE_APP_TOTAL_ITEMS,
+        size: window.VUE_APP_TOTAL_ITEMS,
         sort: [],
         keyword: ""
       }
@@ -202,7 +202,7 @@ export default {
       await this.getAllDiplomasWithPagination({
         params: {
           page: 1,
-          size: process.env.VUE_APP_TOTAL_ITEMS,
+          size: window.VUE_APP_TOTAL_ITEMS,
           sort: [],
           keyword: this.searchContent
         }

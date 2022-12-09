@@ -127,7 +127,7 @@ export default {
   name: "Pagination",
   data() {
     return {
-      totalItems: process.env.VUE_APP_TOTAL_ITEMS
+      totalItems: window.VUE_APP_TOTAL_ITEMS
     }
   },
   props: {

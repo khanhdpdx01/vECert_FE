@@ -16,7 +16,6 @@ Vue.use(VueCookies);
 
 setUpInterceptor(router, VueCookies, localStorage);
 
-console.log(process.env.BASE_URL);
 new Vue({
   router,
   store,

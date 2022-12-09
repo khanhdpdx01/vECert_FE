@@ -159,7 +159,7 @@ export default {
       image: null,
       showVerifyButton: true,
       isValid: true,
-      explorer_endpoint: `${process.env.VUE_APP_EXPLORER_ENDPOINT}/?tab=transactions&transId=${this.diploma.transactionId}`,
+      explorer_endpoint: `${window.VUE_APP_EXPLORER_ENDPOINT}/?tab=transactions&transId=${this.diploma.transactionId}`,
       isSigned: false,
       isAdminPage: true,
     };
@@ -173,11 +173,11 @@ export default {
 
     if (this.diploma.status === 1) {
       this.image =
-        process.env.VUE_APP_IPFS_ENDPOINT + "/ipfs/" + this.diploma?.diplomaLink;
+        window.VUE_APP_IPFS_ENDPOINT + "/ipfs/" + this.diploma?.diplomaLink;
         this.isSigned = true;
     } else {
       this.image =
-        process.env.VUE_APP_SERVICE_ENDPOINT + "/diplomas/files/" +
+        window.VUE_APP_SERVICE_ENDPOINT + "/diplomas/files/" +
         this.diploma?.diplomaLink;
     }
     if(this.$route.name === 'Home') {
